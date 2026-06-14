@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a0c">
+  <meta name="description" content="Ranking da Arena de Quem Vai Ver o Amanhã?">
+  <title>Ranking da Arena | Quem Vai Ver o Amanhã?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#ranking">Ir para o ranking</a>
+
+  <header class="hero">
+    <p class="eyebrow">GameFest 2026</p>
+    <h1>Quem Vai Ver o Amanhã?</h1>
+    <p class="subtitle">Ranking da Arena</p>
+  </header>
+
+  <main id="ranking" class="container">
+    <section class="toolbar" aria-label="Controles do ranking">
+      <div>
+        <p id="status" class="status" role="status" aria-live="polite">Carregando ranking...</p>
+        <p id="updated-at" class="updated-at"></p>
+      </div>
+      <div class="actions">
+        <button id="speak-button" class="button button-secondary" type="button" disabled>
+          Ouvir pódio
+        </button>
+        <button id="refresh-button" class="button" type="button">
+          Atualizar ranking
+        </button>
+      </div>
+    </section>
+
+    <section aria-labelledby="podium-title">
+      <h2 id="podium-title">Pódio</h2>
+      <div id="podium" class="podium" aria-live="polite">
+        <article class="podium-card podium-card-empty">Aguardando resultados</article>
+      </div>
+    </section>
+
+    <section class="ranking-section" aria-labelledby="ranking-title">
+      <h2 id="ranking-title">Classificação geral</h2>
+      <div class="table-frame">
+        <table>
+          <caption class="sr-only">Classificação dos participantes da Arena GameFest 2026</caption>
+          <thead>
+            <tr>
+              <th scope="col">Posição</th>
+              <th scope="col">Participante</th>
+              <th scope="col">Melhor pontuação</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-body">
+            <tr>
+              <td colspan="3" class="empty-state">Carregando resultados...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Uma experiência totalmente sonora da Resonant Worlds.</p>
+  </footer>
+</body>
+</html>
